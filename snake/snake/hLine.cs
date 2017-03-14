@@ -9,12 +9,12 @@ namespace snake
     class hLine : figure
     {
 
-        public hLine(int xl, int xr, int y, char sym)
+        public hLine(int xLeft, int xRight, int y, char sym)
         {
 
             pList = new List<point>();
 
-            for (int x = xl; x <= xr; x++)
+            for (int x = xLeft; x <= xRight; x++)
             {
                 point p = new point(x, y, sym);
                 pList.Add(p);
