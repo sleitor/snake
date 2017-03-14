@@ -6,29 +6,20 @@ using System.Threading.Tasks;
 
 namespace snake
 {
-    class vLine
+    class vLine : figure
     {
-        List<point> vList;
 
         public vLine(int x, int yt, int yb, char sym)
         {
 
-            vList = new List<point>();
+            pList = new List<point>();
 
             for (int y = yt; y <= yb; y++)
             {
                 point p = new point(x, y, sym);
-                vList.Add(p);
+                pList.Add(p);
             }
 
-
-        }
-        public void drow()
-        {
-            foreach (point p in vList)
-            {
-                p.draw();
-            }
 
         }
     }

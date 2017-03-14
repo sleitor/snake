@@ -10,31 +10,23 @@ namespace snake
     {
         static void Main(string[] args)
         {
-            point p1 = new point(5,2,'*');
-            p1.draw();
+            Console.SetWindowSize(80, 25);
+            Console.SetBufferSize(80, 25);
+                        vLine vLeftline = new vLine(0, 0, 24, '+');
+                        vLeftline.drow();
 
-            point p2 = new point(2,7,'#');
-            p2.draw();
+                        vLine vRigntline = new vLine(79, 0, 24, '+');
+                        vRigntline.drow();
 
-            List<point> listpoint = new List<point>();
-            listpoint.Add(p1);
-            listpoint.Add(p2);
+                        hLine hUpline = new hLine(1, 78, 0, '+');
+                        hUpline.drow();
 
-            point p3 = new point(1, 2, '%');
-            point p4 = new point(3, 5, '@');
-            p3.draw();
-            p4.draw();
+                        hLine hDownline = new hLine(0, 79, 24, '+');
+                        hDownline.drow();
 
+            point p = new point(5,5,'*');
+            p.draw();
 
-            listpoint.Add(p3);
-            listpoint.Add(p4);
-
-
-            hLine hline = new hLine(5,10,15,'+');
-            hline.drow();
-
-            vLine vline = new vLine(1, 2, 5, '/');
-            vline.drow();
 
             Console.ReadLine();
 
