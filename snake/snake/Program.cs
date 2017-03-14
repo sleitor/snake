@@ -25,7 +25,8 @@ namespace snake
                         hDownline.drow();
 
             point p = new point(5,5,'*');
-            p.draw();
+            snake Snake = new snake(p, 7, direction.RIGHT);
+            Snake.drow();
 
 
             Console.ReadLine();
