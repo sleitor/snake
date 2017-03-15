@@ -32,26 +32,14 @@ namespace snake
 
             while (true)
             {
-                
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
-                    if (key.Key == ConsoleKey.LeftArrow)
-                        snake.direction = direction.LEFT;
-                    if (key.Key == ConsoleKey.RightArrow)
-                        snake.direction = direction.RIGHT;
-                    if (key.Key == ConsoleKey.UpArrow)
-                        snake.direction = direction.UP;
-                    if (key.Key == ConsoleKey.DownArrow)
-                        snake.direction = direction.DOWN;
-
+                    Snake.handleKey(key.Key);
                 }
                 Thread.Sleep(100);
                 Snake.move();
             }
-
-            Console.ReadLine();
-
         }
     }
 }
