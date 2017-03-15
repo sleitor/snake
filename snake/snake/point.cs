@@ -51,6 +51,11 @@ namespace snake
             }
         }
 
+        internal void clear()
+        {
+            sym = ' ';
+            draw();
+        }
 
         public void draw()
         {

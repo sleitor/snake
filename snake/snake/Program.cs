@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,6 +29,18 @@ namespace snake
             snake Snake = new snake(p, 7, direction.RIGHT);
             Snake.drow();
 
+            
+
+            Snake.move();
+            Thread.Sleep(300);
+            Snake.move();
+            Thread.Sleep(300);
+            Snake.move();
+            Thread.Sleep(300);
+            Snake.move();
+            Thread.Sleep(300);
+            Snake.move();
+            Thread.Sleep(300);
 
             Console.ReadLine();
 

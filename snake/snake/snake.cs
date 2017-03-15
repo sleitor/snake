@@ -8,9 +8,10 @@ namespace snake
 {
     class snake : figure
     {
-        public snake(point tail, int length, direction direction)
+        direction direction;
+        public snake(point tail, int length, direction _direction)
         {
-
+            direction = _direction;
             pList = new List<point>();
             for (int i = 0; i < length; i++)
             {
@@ -19,6 +20,26 @@ namespace snake
                 pList.Add(p);
 
             }
+        }
+
+        internal void move()
+        {
+            point tail = pList.First();
+            pList.Remove(tail);
+            point head = GetNextPoint();
+            pList.Add(head);
+
+            tail.clear();
+            head.draw();
+            
+        }
+
+        private point GetNextPoint()
+        {
+            point head = pList.Last();
+            point nextpoint = head;
+            nextpoint.move(1, direction);
+            return nextpoint;
         }
     }
 }
